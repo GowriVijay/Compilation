@@ -1,0 +1,86 @@
+CONCAT(RTRIM(vGRP),RTRIM(CHAR.SUBSTR(vasp,4,1)),RTRIM(vco),RTRIM(CHAR.SUBSTR(vasp,4,1)),RTRIM(vasp))
+CONCAT(RTRIM(grp),RTRIM(asp))
+
+CONCAT(RTRIM(vertical)," ",RTRIM(connector)," ",RTRIM(gender))
+
+USE ALL.
+COMPUTE filter_$=(vco = 1  & vgrp = 1 & Q3 = 1 & Q2_order = 1).
+VARIABLE LABELS filter_$ 'vco = 1  & vgrp = 1 & vchrt = 2 (FILTER)'.
+VALUE LABELS filter_$ 0 'Not Selected' 1 'Selected'.
+FORMATS filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE.
+  FREQUENCIESS VARIABLES=Q5A Q5A_Q5B Q5A_Q5C
+  /STATISTICS=STDDEV MEAN MEDIAN MODE SUM.
+
+USE ALL.
+COMPUTE filter_$=(vco = 1  & vgrp = 1 & vchrt = 1 & Q3 = 1 & Q2_Order = 1).
+VARIABLE LABELS filter_$ 'vco = 1  & vgrp = 1 & vchrt = 2 (FILTER)'.
+VALUE LABELS filter_$ 0 'Not Selected' 1 'Selected'.
+FORMATS filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE.
+FREQUENCIESS VARIABLES=Q5A Q5A_Q5B Q5A_Q5C
+  /STATISTICS=STDDEV MEAN MEDIAN MODE SUM.
+
+
+USE ALL.
+COMPUTE filter_$=(vco = 1  & vgrp = 1 & vchrt = 2 & Q3 = 1 & Q2_order = 1).
+VARIABLE LABELS filter_$ 'vco = 1  & vgrp = 1 & vchrt = 2 (FILTER)'.
+VALUE LABELS filter_$ 0 'Not Selected' 1 'Selected'.
+FORMATS filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE.
+  FREQUENCIESS VARIABLES=Q5A Q5A_Q5B Q5A_Q5C
+  /STATISTICS=STDDEV MEAN MEDIAN MODE SUM.
+
+  
+USE ALL.
+COMPUTE filter_$=(vco = 1  & vgrp = 1 & vchrt = 3 & Q3 = 1 & Q2_order = 1).
+VARIABLE LABELS filter_$ 'vco = 1  & vgrp = 1 & vchrt = 2 (FILTER)'.
+VALUE LABELS filter_$ 0 'Not Selected' 1 'Selected'.
+FORMATS filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE.
+  FREQUENCIESS VARIABLES=Q5A Q5A_Q5B Q5A_Q5C
+  /STATISTICS=STDDEV MEAN MEDIAN MODE SUM.
+
+  USE ALL.
+COMPUTE filter_$=(vco = 1  & vgrp = 1 & Q3 = 2 & Q2_order = 1).
+VARIABLE LABELS filter_$ 'vco = 1  & vgrp = 1 & vchrt = 2 (FILTER)'.
+VALUE LABELS filter_$ 0 'Not Selected' 1 'Selected'.
+FORMATS filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE.
+  FREQUENCIESS VARIABLES=Q5A Q5A_Q5B Q5A_Q5C
+  /STATISTICS=STDDEV MEAN MEDIAN MODE SUM.
+  
+USE ALL.
+COMPUTE filter_$=(vco = 1  & vgrp = 1 & vchrt = 1 & Q3 = 2 & Q2_order = 1).
+VARIABLE LABELS filter_$ 'vco = 1  & vgrp = 1 & vchrt = 2 (FILTER)'.
+VALUE LABELS filter_$ 0 'Not Selected' 1 'Selected'.
+FORMATS filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE.
+FREQUENCIESS VARIABLES=Q5A Q5A_Q5B Q5A_Q5C
+  /STATISTICS=STDDEV MEAN MEDIAN MODE SUM.
+
+USE ALL.
+COMPUTE filter_$=(vco = 1  & vgrp = 1 & vchrt = 2 & Q3 = 2 & Q2_order = 1).
+VARIABLE LABELS filter_$ 'vco = 1  & vgrp = 1 & vchrt = 2 (FILTER)'.
+VALUE LABELS filter_$ 0 'Not Selected' 1 'Selected'.
+FORMATS filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE.
+  FREQUENCIESS VARIABLES=Q5A Q5A_Q5B Q5A_Q5C
+  /STATISTICS=STDDEV MEAN MEDIAN MODE SUM.
+  
+USE ALL.
+COMPUTE filter_$=(vco = 1  & vgrp = 1 & vchrt = 3 & Q3 = 2 & Q2_order = 1).
+VARIABLE LABELS filter_$ 'vco = 1  & vgrp = 1 & vchrt = 2 (FILTER)'.
+VALUE LABELS filter_$ 0 'Not Selected' 1 'Selected'.
+FORMATS filter_$ (f1.0).
+FILTER BY filter_$.
+EXECUTE.
+  FREQUENCIESS VARIABLES=Q5A Q5A_Q5B Q5A_Q5C
+  /STATISTICS=STDDEV MEAN MEDIAN MODE SUM.
